@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3729660427823750304}
+  - component: {fileID: 78973995407111025}
   m_Layer: 0
   m_Name: Look Root
   m_TagString: Untagged
@@ -23,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729660427823750307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.0020943612, y: 0.00802839, z: 0.000016814927, w: 0.99996555}
   m_LocalPosition: {x: 0, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -32,7 +33,29 @@ Transform:
   - {fileID: 3729660428949415378}
   m_Father: {fileID: 3729660428357311968}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.24, y: 0.92, z: 0}
+--- !u!114 &78973995407111025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660427823750307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db37397a48fb2da46a4e9e50e031286c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRoot: {fileID: 3729660428357311968}
+  lookRoot: {fileID: 3729660427823750304}
+  invert: 0
+  can_Unlock: 1
+  sensivity: 5
+  smooth_Steps: 10
+  smooth_Weight: 0.4
+  roll_Angle: 0
+  roll_Speed: 3
+  default_Look_Limits: {x: -70, y: 80}
 --- !u!1 &3729660428357311970
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +66,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3729660428357311968}
   - component: {fileID: 3729660428357311971}
+  - component: {fileID: 2152983837771408995}
+  - component: {fileID: 7162091155872277911}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,6 +108,32 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2152983837771408995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660428357311970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11acbdbbe1af614184131ddae3a82e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jump_Force: 10
+--- !u!114 &7162091155872277911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660428357311970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27eb40cf11e32654f87008f5fdba1a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3729660428379729823
 GameObject:
   m_ObjectHideFlags: 0
