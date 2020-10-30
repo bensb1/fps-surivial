@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &242847024 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2543586345469312731, guid: 497a42e8480d5394eaecdc8e3597d884,
+    type: 3}
+  m_PrefabInstance: {fileID: 3729660428256445166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &553031775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,6 +276,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!82 &1190828671 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7345880022461830210, guid: 497a42e8480d5394eaecdc8e3597d884,
+    type: 3}
+  m_PrefabInstance: {fileID: 3729660428256445166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1190828672 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4472502873972205845, guid: 497a42e8480d5394eaecdc8e3597d884,
+    type: 3}
+  m_PrefabInstance: {fileID: 3729660428256445166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1484834512 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6847672820244661824, guid: 497a42e8480d5394eaecdc8e3597d884,
+    type: 3}
+  m_PrefabInstance: {fileID: 3729660428256445166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3729660428256445166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,10 +301,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2152983837771408995, guid: 497a42e8480d5394eaecdc8e3597d884,
+    - target: {fileID: 1932803991930670715, guid: 497a42e8480d5394eaecdc8e3597d884,
         type: 3}
-      propertyPath: speed
-      value: 4
+      propertyPath: Weapon_Aim
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932803991930670715, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 1484834512}
+    - target: {fileID: 1932803991930670715, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: fireType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200981831036454151, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: Weapon_Aim
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200981831036454151, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: bulletType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3729660428357311968, guid: 497a42e8480d5394eaecdc8e3597d884,
         type: 3}
@@ -342,20 +386,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7162091155872277911, guid: 497a42e8480d5394eaecdc8e3597d884,
+    - target: {fileID: 7491500016199672888, guid: 497a42e8480d5394eaecdc8e3597d884,
         type: 3}
-      propertyPath: sprint_Speed
-      value: 8
+      propertyPath: Weapon_Aim
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7162091155872277911, guid: 497a42e8480d5394eaecdc8e3597d884,
+    - target: {fileID: 7491500016199672888, guid: 497a42e8480d5394eaecdc8e3597d884,
         type: 3}
-      propertyPath: move_Speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7162091155872277911, guid: 497a42e8480d5394eaecdc8e3597d884,
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 1190828672}
+    - target: {fileID: 7491500016199672888, guid: 497a42e8480d5394eaecdc8e3597d884,
         type: 3}
-      propertyPath: crouch_Speed
-      value: 1.5
+      propertyPath: reload_Sound
+      value: 
+      objectReference: {fileID: 1190828671}
+    - target: {fileID: 7732212309788885732, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: Weapon_Aim
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7732212309788885732, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: bulletType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673692286712354343, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: Weapon_Aim
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673692286712354343, guid: 497a42e8480d5394eaecdc8e3597d884,
+        type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 242847024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497a42e8480d5394eaecdc8e3597d884, type: 3}
