@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 78973995407111025}
   m_Layer: 0
   m_Name: Look Root
-  m_TagString: Untagged
+  m_TagString: Look Root
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,10 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42ae98720680145879015fade59560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon_Aim: 0
+  Weapon_Aim: 2
   muzzleFlash: {fileID: 0}
-  shootSound: {fileID: 0}
-  reload_Sound: {fileID: 0}
+  shootSound: {fileID: 4472502873972205845}
+  reload_Sound: {fileID: 7345880022461830210}
   fireType: 0
   bulletType: 0
   attack_Point: {fileID: 0}
@@ -279,12 +279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42ae98720680145879015fade59560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon_Aim: 0
+  Weapon_Aim: 1
   muzzleFlash: {fileID: 0}
   shootSound: {fileID: 0}
   reload_Sound: {fileID: 0}
   fireType: 0
-  bulletType: 0
+  bulletType: 2
   attack_Point: {fileID: 0}
 --- !u!82 &2543586345469312731
 AudioSource:
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42ae98720680145879015fade59560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon_Aim: 0
+  Weapon_Aim: 2
   muzzleFlash: {fileID: 0}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 2543586345469312731}
   reload_Sound: {fileID: 0}
   fireType: 0
   bulletType: 0
@@ -413,6 +413,8 @@ GameObject:
   - component: {fileID: 3729660428357311971}
   - component: {fileID: 2152983837771408995}
   - component: {fileID: 7162091155872277911}
+  - component: {fileID: 4297935097236302398}
+  - component: {fileID: 7617799588565735410}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -482,6 +484,37 @@ MonoBehaviour:
   sprint_Speed: 8
   move_Speed: 4
   crouch_Speed: 1.5
+--- !u!114 &4297935097236302398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660428357311970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256e0a88544f89746a04559793986899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 3956973674963481195}
+  - {fileID: 8673692286712354343}
+  - {fileID: 7491500016199672888}
+  - {fileID: 1932803991930670715}
+  - {fileID: 2200981831036454151}
+  - {fileID: 7732212309788885732}
+--- !u!114 &7617799588565735410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660428357311970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9e2a60fa2f02249aef820fb7966de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3729660428379729823
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,11 +821,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42ae98720680145879015fade59560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon_Aim: 0
+  Weapon_Aim: 2
   muzzleFlash: {fileID: 0}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 6847672820244661824}
   reload_Sound: {fileID: 0}
-  fireType: 0
+  fireType: 1
   bulletType: 0
   attack_Point: {fileID: 0}
 --- !u!1 &3729660428949415381
@@ -841,9 +874,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3729660429333575910}
   - component: {fileID: 3729660429333575911}
+  - component: {fileID: 1756344242}
   m_Layer: 0
   m_Name: FP Camera
-  m_TagString: Untagged
+  m_TagString: FP Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -856,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729660429333575913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3729660427823750304}
@@ -905,6 +939,25 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!95 &1756344242
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729660429333575913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 474cfcac2e5257843947bbbfe007356a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7732212309788885732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,12 +970,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42ae98720680145879015fade59560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon_Aim: 0
+  Weapon_Aim: 1
   muzzleFlash: {fileID: 0}
   shootSound: {fileID: 0}
   reload_Sound: {fileID: 0}
   fireType: 0
-  bulletType: 0
+  bulletType: 1
   attack_Point: {fileID: 0}
 --- !u!1001 &3729660428075213462
 PrefabInstance:
@@ -1875,15 +1928,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0c4bc943ef0b9cb4480b9af834e2ce7b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bd6bf150a6e08645964bd2baf2a789b, type: 3}
---- !u!1 &3729660428292210330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100028, guid: 2bd6bf150a6e08645964bd2baf2a789b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3729660428292306982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3729660428292694714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400028, guid: 2bd6bf150a6e08645964bd2baf2a789b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3729660428292306982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3729660428292210330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100028, guid: 2bd6bf150a6e08645964bd2baf2a789b,
     type: 3}
   m_PrefabInstance: {fileID: 3729660428292306982}
   m_PrefabAsset: {fileID: 0}
@@ -1933,6 +1986,10 @@ PrefabInstance:
     - target: {fileID: 100014, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
+      propertyPath: m_TagString
+      value: Axe
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_Layer
@@ -2567,6 +2624,10 @@ PrefabInstance:
     - target: {fileID: 100048, guid: 9ba50ff5806385f4da160695a7223e1d, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 9ba50ff5806385f4da160695a7223e1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100050, guid: 9ba50ff5806385f4da160695a7223e1d, type: 3}
       propertyPath: m_Layer
