@@ -46,6 +46,8 @@ public class PlayerAttack : MonoBehaviour
     {
         WeaponShoot();
         ZoomInAndOut();
+       
+
     }
 
     void WeaponShoot()
@@ -64,7 +66,7 @@ public class PlayerAttack : MonoBehaviour
 
                 weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
 
-                //BulletFired();
+                BulletFired();
 
             }
 
@@ -89,7 +91,7 @@ public class PlayerAttack : MonoBehaviour
 
                     weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
 
-                    // BulletFired();
+                     BulletFired();
 
                 }
                 else
@@ -173,16 +175,25 @@ public class PlayerAttack : MonoBehaviour
 
             }
 
+        }
+
+
 
 
         }
-    }
+        void BulletFired()
+        {
+            RaycastHit hit;
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+        {
+            print("WE HIT:" + hit.transform.gameObject.name);
+        }
+        }
 
-            
 
 
 
-        } // class
+    }// class
 
 
 
