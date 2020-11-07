@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
     public float wait_Before_Attack = 2f;
     private float attack_Timer;
     private Transform target;
+    public GameObject attack_Point;
 
     void Awake()
     {
@@ -173,6 +174,26 @@ public class EnemyController : MonoBehaviour
                 NavMeshHit navHit;
                 NavMesh.SamplePosition(randDir, out navHit, rand_Radius, -1);
                 navAgent.SetDestination(navHit.position);
+
             }
+
+
+        }
+    void Turn_On_AttackPoint()
+    {
+        attack_Point.SetActive(true);
+    }
+    void Turn_Off_AttackPoint()
+    {
+        if (attack_Point.activeInHierarchy)
+        {
+            attack_Point.SetActive(false);
         }
     }
+
+    public EnemyState Enemy_State
+    {
+        get; set;
+    }
+
+}
