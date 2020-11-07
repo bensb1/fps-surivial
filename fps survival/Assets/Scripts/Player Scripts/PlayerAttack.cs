@@ -46,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
     {
         WeaponShoot();
         ZoomInAndOut();
-       
+
 
     }
 
@@ -91,35 +91,13 @@ public class PlayerAttack : MonoBehaviour
 
                     weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
 
-                     BulletFired();
+                    BulletFired();
 
                 }
-                else
-                {
+         
+                    
 
-                    // we have an arrow or spear
-                    if (is_Aiming)
-                    {
-
-                        weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
-                        //throw arrow
-
-                        if (weapon_Manager.GetCurrentSelectedWeapon().bulletType
-                        == WeaponBulletType.ARROW)
-                        {
-
-
-                        }
-                        else if (weapon_Manager.GetCurrentSelectedWeapon().bulletType
-                      == WeaponBulletType.SPEAR)
-                        {
-
-
-                        }
-
-                    }
-
-                } // else
+                 // else
 
 
             } // if input get mouse button 0
@@ -182,25 +160,24 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-        }
-        void BulletFired()
-        {
-            RaycastHit hit;
+    }
+    void BulletFired()
+    {
+        RaycastHit hit;
         if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
         {
-            print("WE HIT:" + hit.transform.gameObject.name);
+            
             if (hit.transform.tag == Tags.ENEMY_TAG)
             {
                 hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
         }
-        }
+    }
 
 
 
 
-    }// class
-
+}// class
 
 
 

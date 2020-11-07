@@ -15,6 +15,7 @@ public class HealthScript : MonoBehaviour
     public bool is_Player,  is_Cannibal;
 
     private bool is_Dead;
+    private EnemyAudio enemyAudio;
 
     
 
@@ -30,6 +31,7 @@ public class HealthScript : MonoBehaviour
             navAgent = GetComponent<NavMeshAgent>();
 
             // get enemy audio
+            enemyAudio = GetComponentInChildren<EnemyAudio>();
             ;
         }
 
@@ -55,7 +57,7 @@ public class HealthScript : MonoBehaviour
             
         }
 
-        if ( is_Cannibal)
+        if (is_Cannibal)
         {
             if (enemy_Controller.Enemy_State == EnemyState.PATROL)
             {
@@ -88,7 +90,7 @@ public class HealthScript : MonoBehaviour
             enemy_Anim.enabled = false;
 
 
-
+            StartCoroutine(DeadSound());
             // EnemyManager spawn more enemies
 
         }
@@ -136,6 +138,12 @@ public class HealthScript : MonoBehaviour
     void TurnOffGameObject()
     {
         gameObject.SetActive(false);
+    }
+    IEnumerator DeadSound()
+    {
+        yield return new WaitForSeconds(0.3f);
+        enemyAudio.Play_DeadSound();
+
     }
 }
 
