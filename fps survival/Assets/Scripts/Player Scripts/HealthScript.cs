@@ -16,6 +16,7 @@ public class HealthScript : MonoBehaviour
 
     private bool is_Dead;
     private EnemyAudio enemyAudio;
+    private PlayerStats player_Stats;
 
     
 
@@ -37,7 +38,7 @@ public class HealthScript : MonoBehaviour
 
         if (is_Player)
         {
-            
+            player_Stats = GetComponent<PlayerStats>();
         }
 
     }
@@ -54,7 +55,7 @@ public class HealthScript : MonoBehaviour
         if (is_Player)
         {
             // show the stats(display the health UI value)
-            
+            player_Stats.Display_HealthStats(health);
         }
 
         if (is_Cannibal)

@@ -110,7 +110,7 @@ public class PlayerAttack : MonoBehaviour
     {
 
         // we are going to aim with our camera on the weapon
-        if (weapon_Manager.GetCurrentSelectedWeapon().Weapon_Aim == WeaponAim.AIM)
+        if (weapon_Manager.GetCurrentSelectedWeapon().weapon_Aim == WeaponAim.AIM)
         {
 
             // if we press and hold right mouse button
@@ -132,7 +132,7 @@ public class PlayerAttack : MonoBehaviour
 
         } // if we need to zoom the weapon
 
-        if (weapon_Manager.GetCurrentSelectedWeapon().Weapon_Aim == WeaponAim.SELF_AIM)
+        if (weapon_Manager.GetCurrentSelectedWeapon().weapon_Aim == WeaponAim.SELF_AIM)
         {
 
             if (Input.GetMouseButtonDown(1))
