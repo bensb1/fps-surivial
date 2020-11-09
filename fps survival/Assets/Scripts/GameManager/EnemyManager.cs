@@ -17,6 +17,12 @@ public class EnemyManager : MonoBehaviour
     {
         MakeInstance();
     }
+     void Start()
+    {
+        initial_Cannibal_Count = cannibal_Enemy_Count;
+        SpawnEnemies();
+        StartCoroutine("CheckToSpawnEnemies");
+    }
 
     void MakeInstance()
     {
@@ -24,6 +30,49 @@ public class EnemyManager : MonoBehaviour
         {
             instance = this;
         }
+        
     }
-}
+    void SpawnEnemies()
+    {
+        SpawnCannibals();
+    }
+        void SpawnCannibals()
+        {
+        int index = 0;
+        for (int i = 0; i < cannibal_Enemy_Count; i++)
+        {
+            if(index >= cannibal_SpawnPoints.Length)
+            {
+                index = 0;
+            }
+            Instantiate(cannibal_Prefab, cannibal_SpawnPoints[index].position, Quaternion.identity);
+            index++;
+        }
+        cannibal_Enemy_Count = 0;
+        }
+         IEnumerator CheckToSpawnEnemies()
+    {
+        yield return new WaitForSeconds(wait_Before_Spawn_Enemies_Time);
+        SpawnCannibals();
+
+    }
+    public void EnemyDied(bool cannibal)
+    {
+        if(cannibal)
+        {
+            cannibal_Enemy_Count++;
+            if(cannibal_Enemy_Count > initial_Cannibal_Count)
+            {
+                cannibal_Enemy_Count = initial_Cannibal_Count;
+            }
+        }
+    }
+    public void StopSpawning()
+    {
+        StopCoroutine("CheckToSpawnEnemies");
+    }
+    }
+
+
+
 

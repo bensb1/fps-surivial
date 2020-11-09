@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19145655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71.3, y: 0, z: 78.1}
+  m_LocalPosition: {x: 157.9, y: 12, z: -72.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -500,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834716812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 41.7}
+  m_LocalPosition: {x: 0, y: 12, z: 52.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -530,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896205538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.9, y: 0, z: -82}
+  m_LocalPosition: {x: -39, y: 12, z: -82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -634,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973990831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -62.1}
+  m_LocalPosition: {x: 0, y: 12, z: -48.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -806,7 +806,7 @@ RectTransform:
   m_Children:
   - {fileID: 1407556329}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -843,7 +843,7 @@ Transform:
   m_Children:
   - {fileID: 347419008}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1324578311
 MonoBehaviour:
@@ -857,9 +857,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2485189af60b64599f9a99e7a67982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannibal_Prefab: {fileID: 0}
-  cannibal_SpawnPoints: []
-  cannibal_Enemy_Count: 0
+  cannibal_Prefab: {fileID: 1445581021730138352, guid: 443507415407f714ca231870b9be9155,
+    type: 3}
+  cannibal_SpawnPoints:
+  - {fileID: 834716813}
+  - {fileID: 1556058301}
+  - {fileID: 973990832}
+  - {fileID: 1606427704}
+  - {fileID: 19145656}
+  - {fileID: 896205539}
+  cannibal_Enemy_Count: 6
   wait_Before_Spawn_Enemies_Time: 10
 --- !u!1 &1407556328
 GameObject:
@@ -961,7 +968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556058300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.3, y: 0, z: 0}
+  m_LocalPosition: {x: 61.1, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -991,7 +998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606427703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 154.64, y: 0, z: 0}
+  m_LocalPosition: {x: 154.64, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 347419008}
@@ -1176,72 +1183,3 @@ PrefabInstance:
       objectReference: {fileID: 913328831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497a42e8480d5394eaecdc8e3597d884, type: 3}
---- !u!1001 &8779383189487442181
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1445581021730138352, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannibal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 69.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 109
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844719376878628437, guid: 443507415407f714ca231870b9be9155,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 443507415407f714ca231870b9be9155, type: 3}

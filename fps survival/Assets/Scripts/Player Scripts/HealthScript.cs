@@ -93,6 +93,7 @@ public class HealthScript : MonoBehaviour
 
             StartCoroutine(DeadSound());
             // EnemyManager spawn more enemies
+            EnemyManager.instance.EnemyDied(true);
 
         }
 
@@ -108,6 +109,7 @@ public class HealthScript : MonoBehaviour
             }
 
             // call enemy manager to stop spawning enemis
+            EnemyManager.instance.StopSpawning();
 
 
             GetComponent<PlayerMovement>().enabled = false;
