@@ -152,12 +152,13 @@ public class PlayerAttack : MonoBehaviour
                 is_Aiming = false;
 
             }
+            
 
 
 
         }
 
-
+        
 
 
     }
@@ -166,7 +167,10 @@ public class PlayerAttack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
         {
-            
+            Debug.Log(hit.transform.tag);
+
+        }
+
             if (hit.transform.tag == Tags.ENEMY_TAG)
             {
                 hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
@@ -177,7 +181,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-}// class
+// class
 
 
 
