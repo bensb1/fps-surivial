@@ -12,7 +12,7 @@ public class HealthScript : MonoBehaviour
 
     public float health = 100f;
 
-    public bool is_Player,  is_Cannibal;
+    public bool is_Player,  is_Cannibal, is_zombie;
 
     private bool is_Dead;
     private EnemyAudio enemyAudio;
@@ -25,7 +25,7 @@ public class HealthScript : MonoBehaviour
     void Awake()
     {
 
-        if (is_Cannibal)
+        if (is_Cannibal || is_zombie)
         {
             enemy_Anim = GetComponent<EnemyAnimator>();
             enemy_Controller = GetComponent<EnemyController>();
@@ -58,7 +58,7 @@ public class HealthScript : MonoBehaviour
             player_Stats.Display_HealthStats(health);
         }
 
-        if (is_Cannibal)
+        if (is_Cannibal || is_zombie)
         {
             if (enemy_Controller.Enemy_State == EnemyState.PATROL)
             {

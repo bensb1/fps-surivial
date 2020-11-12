@@ -42,6 +42,10 @@ public class WeaponManager : MonoBehaviour {
         {
             TurnOnSelectedWeapon(5);
         }
+        if(Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            TurnOnSelectedWeapon(6);
+        }
     }//update
     void TurnOnSelectedWeapon(int weaponIndex)
     {  if(current_Weapon_Index == weaponIndex)
