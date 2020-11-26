@@ -9,6 +9,10 @@ TagManager:
   - Look Root
   - FP Camera
   - Enemy
+  - Target
+  - Metal
+  - ExplosiveBarrel
+  - CanGrab
   layers:
   - Default
   - TransparentFX
