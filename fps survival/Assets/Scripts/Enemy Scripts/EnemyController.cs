@@ -174,9 +174,10 @@ public class EnemyController : MonoBehaviour
             {
                 float rand_Radius = Random.Range(patrol_Radius_Min, patrol_Radius_Max);
                 Vector3 randDir = Random.insideUnitSphere * rand_Radius;
-                randDir += transform.position;
+                randDir += navAgent.Warp();
                 NavMeshHit navHit;
                 NavMesh.SamplePosition(randDir, out navHit, rand_Radius, -1);
+
                 navAgent.SetDestination(navHit.position);
 
             }
