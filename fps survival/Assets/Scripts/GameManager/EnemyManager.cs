@@ -12,6 +12,7 @@ public class EnemyManager : MonoBehaviour
     private int cannibal_Enemy_Count;
     private int initial_Cannibal_Count;
     public float wait_Before_Spawn_Enemies_Time = 10f;
+    int j = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -38,15 +39,15 @@ public class EnemyManager : MonoBehaviour
     }
         void SpawnCannibals()
         {
-        int index = 0;
+        
         for (int i = 0; i < cannibal_Enemy_Count; i++)
         {
-            if(index >= cannibal_SpawnPoints.Length)
+            if(j >= cannibal_SpawnPoints.Length)
             {
-                index = 0;
+                j = 0;
             }
-            Instantiate(cannibal_Prefab, cannibal_SpawnPoints[index].position, Quaternion.identity);
-            index++;
+            Instantiate(cannibal_Prefab, cannibal_SpawnPoints[j].position, Quaternion.identity);
+            j++;
         }
         cannibal_Enemy_Count = 0;
         }
