@@ -171,7 +171,7 @@ public class PlayerAttack : MonoBehaviour
 
         }
 
-            if (hit.transform.tag == Tags.ENEMY_TAG)
+            if (hit.transform.tag == "Enemy")
             {
                 hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
